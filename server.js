@@ -17,4 +17,4 @@ app.use(cors());
 app.use(express.json());
 
 require('./src/Routes/index')(app);
-app.listen(3333);
+app.listen(process.env.PORT);
