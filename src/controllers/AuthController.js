@@ -1,4 +1,4 @@
-const UsuarioModel = require('../Models/Usuario');
+const UsuarioModel = require('../models/Usuario');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const secret = process.env.SECRET;

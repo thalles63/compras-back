@@ -16,5 +16,5 @@ mongoose.connect(
 app.use(cors());
 app.use(express.json());
 
-require('./src/routes/index.js')(app);
+require('./src/routes/index')(app);
 app.listen(process.env.PORT);
