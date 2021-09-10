@@ -12,7 +12,7 @@ mongoose.connect(
         useUnifiedTopology: true
     }
 );
-var whitelist = ['http://localhost:4200', 'https://app-compras.vercel.app']
+var whitelist = ['http://localhost:4200', 'https://compras-front.vercel.app']
 var corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
