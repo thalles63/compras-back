@@ -14,6 +14,6 @@ exports.login = async (req, res, next) => {
         const token = jwt.sign({ userId: usuario._id }, secret);
         res.send({ auth: true, token })
     } else {
-        res.status(401).send({ auth: false, error: 'Nome ou senha inválidos.' })
+        res.status(401).send({ auth: false, error: 'Senha inválida' })
     }
 };
