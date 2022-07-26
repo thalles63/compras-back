@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 mongoose.connect(
-    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@compras.rlfbs.mongodb.net/compras?retryWrites=true&w=majority`,
+    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@compras.rlfbs.mongodb.net/${process.env.COLLECTION}?retryWrites=true&w=majority`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
