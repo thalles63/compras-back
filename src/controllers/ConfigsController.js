@@ -14,13 +14,13 @@ exports.put = async (req, res) => {
     let usuarios = await UsuarioModel.find({}, {password: 0});
 
     usuarios.forEach(async (usuario) => {
-        if (usuario._id.toString() === novo.usuario) {
+        if (usuario.id.toString() === novo.usuario) {
             await ConfigsModel.updateOne({ id: id }, novo);
         } else {
             const newPorcentagem = {};
             newPorcentagem.porcentagem = 100 - novo.porcentagem;
-            newPorcentagem.usuario = usuario._id.toString();
-            await ConfigsModel.updateOne({ usuario: usuario._id.toString() }, newPorcentagem);
+            newPorcentagem.usuario = usuario.id.toString();
+            await ConfigsModel.updateOne({ usuario: usuario.id.toString() }, newPorcentagem);
         }
     });
 

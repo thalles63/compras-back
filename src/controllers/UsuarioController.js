@@ -7,6 +7,6 @@ exports.get = async (req, res, next) => {
 
 exports.getById = async (req, res, next) => {
     const id = req.params.id;
-    const usuario = await UsuarioModel.findOne({ _id: id });
+    const usuario = await UsuarioModel.findOne({ id: id });
     res.status(200).send(usuario);
 };
